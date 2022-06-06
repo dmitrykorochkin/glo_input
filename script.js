@@ -17,15 +17,14 @@ const logger = function (event){
 };
 
 const range = function (e) {
-    span.textContent = e.target.value;
-    circle.style.width = span.textContent + '%';
-    circle.style.height = span.textContent + '%';
+    span.textContent = e.target.value + '%';
+    circle.style.width = span.textContent;
+    circle.style.height = span.textContent;
 };
 
 
 
 btn.addEventListener('click', logger);
-inputRange.addEventListener(input, logger);
 inputRange.addEventListener('change', range);
 
 
