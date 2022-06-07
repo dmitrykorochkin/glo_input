@@ -9,23 +9,28 @@ const span = document.getElementById('range-span'); // значение полз
 const circle = document.getElementById('circle'); // круг 
 
 btnBottom.style.display = 'none';
+circle.style.width = '50%';
+circle.style.height = '50%';
+span.innerHTML = '50%';
 
 
 const logger = function (event){
     square.style.backgroundColor = input.value;
-     
+    
 };
 
 const range = function (e) {
+   
     span.textContent = e.target.value + '%';
     circle.style.width = span.textContent;
     circle.style.height = span.textContent;
+
 };
 
 
 
 btn.addEventListener('click', logger);
-inputRange.addEventListener('change', range);
+inputRange.addEventListener('input', range);
 
 
 
